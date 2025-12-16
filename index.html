@@ -1,0 +1,1494 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>ZHAN FLOWERS — Цветы • Розы • Бенто • Пионы | Доставка | Талдыкорган</title>
+  <meta name="description" content="ZHAN FLOWERS — цветы, розы, пионы и бенто-торты. Доставка по Талдыкоргану. Круглосуточно. Оплата Kaspi QR / Halyk. Адрес: Назарбаева 68/78." />
+  <meta name="theme-color" content="#7B2F3B" />
+
+  <!-- OpenGraph for Instagram/TikTok previews -->
+  <meta property="og:title" content="ZHAN FLOWERS — Талдыкорган" />
+  <meta property="og:description" content="Цветы • Розы • Пионы • Бенто. Доставка. Круглосуточно. Kaspi QR / Halyk. Назарбаева 68/78." />
+  <!-- Поставь сюда ссылку на логотип/обложку, если будет (например, из CDN или GitHub raw) -->
+  <meta property="og:image" content="" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#070608;
+      --bg1:#0C0A0D;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.12);
+      --stroke2: rgba(255,255,255,.18);
+      --text:#F6F2F4;
+      --muted: rgba(246,242,244,.72);
+      --muted2: rgba(246,242,244,.55);
+
+      /* ZHAN palette */
+      --wine:#7B2F3B;
+      --wine2:#9D3C4C;
+      --rose:#D8A5B0;
+      --cream:#F2E9EC;
+      --gold:#E8D1A3;
+
+      --shadow: 0 24px 80px rgba(0,0,0,.45);
+      --shadow2: 0 18px 50px rgba(0,0,0,.35);
+
+      --r16: 16px;
+      --r20: 20px;
+      --r28: 28px;
+
+      --max: 1180px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(123,47,59,.35), transparent 65%),
+        radial-gradient(900px 500px at 80% 20%, rgba(157,60,76,.25), transparent 60%),
+        radial-gradient(900px 700px at 60% 90%, rgba(216,165,176,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    button{ font-family:inherit; }
+
+    /* Smooth */
+    html{ scroll-behavior:smooth; }
+
+    /* Background decorative */
+    .grain{
+      pointer-events:none;
+      position:fixed; inset:0;
+      opacity:.09;
+      mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+      background-size: 180px 180px;
+    }
+    .orb{
+      pointer-events:none;
+      position:absolute;
+      filter: blur(22px);
+      opacity:.7;
+      transform: translateZ(0);
+      animation: floaty 9s ease-in-out infinite;
+    }
+    .orb.one{ width:260px;height:260px; left:-80px; top:140px; background: radial-gradient(circle at 30% 30%, rgba(216,165,176,.7), rgba(123,47,59,.1) 65%, transparent 70%); }
+    .orb.two{ width:320px;height:320px; right:-120px; top:560px; background: radial-gradient(circle at 30% 30%, rgba(157,60,76,.55), rgba(216,165,176,.12) 60%, transparent 70%); animation-delay:-2.8s;}
+    .orb.three{ width:380px;height:380px; left:20%; bottom:-180px; background: radial-gradient(circle at 35% 25%, rgba(232,209,163,.35), rgba(123,47,59,.12) 60%, transparent 70%); animation-delay:-5s;}
+
+    @keyframes floaty{
+      0%,100%{ transform: translate3d(0,0,0) scale(1); }
+      50%{ transform: translate3d(0,-18px,0) scale(1.02); }
+    }
+
+    /* Layout */
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px; }
+    .section{ padding: 82px 0; position:relative; }
+    .section.tight{ padding: 62px 0; }
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px; margin-bottom: 18px;
+    }
+    .h2{
+      font-family: Unbounded, Inter, sans-serif;
+      font-size: clamp(22px, 2.4vw, 34px);
+      line-height:1.1;
+      letter-spacing:-.02em;
+      margin:0;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      max-width: 720px;
+      line-height:1.55;
+      font-size: 15px;
+    }
+
+    /* Header */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(180deg, rgba(12,10,13,.82), rgba(12,10,13,.55));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap: 14px;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap: 12px;
+      min-width: 220px;
+    }
+    .logo{
+      width:42px; height:42px; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(216,165,176,.7), rgba(123,47,59,.9));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 18px 40px rgba(123,47,59,.2);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-30%;
+      background: conic-gradient(from 180deg, transparent, rgba(255,255,255,.35), transparent);
+      animation: shimmer 3.4s linear infinite;
+      opacity:.55;
+    }
+    @keyframes shimmer{
+      to{ transform: rotate(360deg); }
+    }
+    .brand .name{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brand .name b{
+      font-family: Unbounded, Inter, sans-serif;
+      letter-spacing:.02em;
+      font-weight:800;
+      font-size: 14px;
+    }
+    .brand .name span{
+      color: var(--muted2);
+      font-size: 12px;
+      margin-top:4px;
+    }
+
+    .nav{
+      display:flex; align-items:center; gap: 16px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .nav a{
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: .2s ease;
+    }
+    .nav a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+    }
+
+    .cta{
+      display:flex; align-items:center; gap: 10px;
+      justify-content:flex-end;
+      min-width: 260px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      cursor:pointer;
+      user-select:none;
+      font-weight:600;
+      font-size: 13px;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
+    .btn:active{ transform: translateY(0); }
+
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(123,47,59,.98), rgba(157,60,76,.92));
+      border-color: rgba(216,165,176,.24);
+      box-shadow: 0 18px 45px rgba(123,47,59,.28);
+    }
+    .btn.primary:hover{
+      background: linear-gradient(135deg, rgba(157,60,76,.98), rgba(123,47,59,.92));
+    }
+    .btn.ghost{
+      background: rgba(0,0,0,.12);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 34px 0 62px;
+      position:relative;
+    }
+    .hero .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border-radius: var(--r28);
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(900px 300px at 20% 10%, rgba(123,47,59,.35), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position:relative;
+      overflow:hidden;
+      transform-style:preserve-3d;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 260px at 50% 0%, rgba(232,209,163,.18), transparent 60%);
+      opacity:.8;
+      pointer-events:none;
+    }
+
+    .badge-row{
+      display:flex; gap: 10px; flex-wrap:wrap; align-items:center;
+      margin-bottom: 16px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap: 8px;
+      padding: 7px 10px;
+      border-radius:999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing:.01em;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(232,209,163,1), rgba(216,165,176,.8));
+      box-shadow: 0 0 0 4px rgba(123,47,59,.25);
+    }
+    .hero h1{
+      margin:0;
+      font-family: Unbounded, Inter, sans-serif;
+      font-size: clamp(30px, 4.2vw, 56px);
+      line-height:1.02;
+      letter-spacing:-.03em;
+    }
+    .hero h1 .grad{
+      background: linear-gradient(90deg, var(--cream), rgba(216,165,176,.95), rgba(232,209,163,.9));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .lead{
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height:1.6;
+      font-size: 15px;
+      max-width: 640px;
+    }
+
+    .hero-actions{
+      display:flex; gap: 10px; flex-wrap:wrap;
+      margin-top: 18px;
+      align-items:center;
+    }
+    .quick{
+      margin-top: 18px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .chip{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      display:inline-flex; gap:10px; align-items:center;
+      transition:.18s ease;
+      font-size: 13px;
+      color: var(--muted);
+      cursor:pointer;
+      user-select:none;
+    }
+    .chip:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); color: var(--text); }
+
+    /* Side card */
+    .side{
+      display:flex; flex-direction:column; gap: 14px;
+    }
+    .mini{
+      border-radius: var(--r28);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow2);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .mini:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 260px at 50% -10%, rgba(216,165,176,.16), transparent 70%);
+      pointer-events:none;
+      opacity:.9;
+    }
+
+    .avatar{
+      display:flex; align-items:center; gap: 14px;
+    }
+    .avatar .ring{
+      width:62px; height:62px; border-radius:999px;
+      padding: 3px;
+      background: conic-gradient(from 120deg, rgba(255,255,255,.25), rgba(216,165,176,.55), rgba(123,47,59,.9), rgba(255,255,255,.2));
+      box-shadow: 0 18px 40px rgba(0,0,0,.28);
+    }
+    .avatar .photo{
+      width:100%; height:100%;
+      border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(216,165,176,.65), rgba(123,47,59,.95));
+      border: 1px solid rgba(255,255,255,.18);
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .avatar .photo svg{
+      opacity:.9;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
+    }
+
+    .avatar .meta b{
+      font-family: Unbounded, Inter, sans-serif;
+      letter-spacing:.02em;
+      font-size: 16px;
+      display:block;
+    }
+    .avatar .meta span{
+      color: var(--muted2);
+      font-size: 12px;
+      display:block;
+      margin-top:6px;
+      line-height:1.3;
+    }
+
+    .facts{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .fact{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      padding: 10px 12px;
+    }
+    .fact b{ display:block; font-size: 12px; color: var(--muted2); font-weight:600; }
+    .fact span{ display:block; margin-top:6px; font-size: 13px; color: var(--text); font-weight:700; }
+
+    /* Cards grid */
+    .cards{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .card{
+      grid-column: span 4;
+      border-radius: var(--r20);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow2);
+      padding: 16px;
+      position:relative;
+      overflow:hidden;
+      transform: translateZ(0);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.18);
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+    }
+    .card .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      margin-bottom: 10px;
+    }
+    .tag{
+      font-size: 12px;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+    }
+    .price{
+      font-weight:800;
+      letter-spacing:.01em;
+      color: var(--cream);
+    }
+    .card h3{
+      margin: 0;
+      font-family: Unbounded, Inter, sans-serif;
+      font-size: 14px;
+      letter-spacing:-.01em;
+      line-height:1.2;
+    }
+    .card p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.55;
+      min-height: 44px;
+    }
+
+    .card .actions{
+      margin-top: 14px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .btn.small{ padding: 9px 10px; border-radius: 14px; font-size: 12px; }
+
+    /* Catalog */
+    .controls{
+      display:flex; flex-wrap:wrap;
+      gap:10px;
+      margin: 16px 0 10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .filters{
+      display:flex; flex-wrap:wrap; gap:10px;
+      align-items:center;
+    }
+    .seg{
+      display:inline-flex;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      padding: 6px;
+      border-radius: 16px;
+      gap:6px;
+    }
+    .seg button{
+      border:0;
+      color: var(--muted);
+      background: transparent;
+      padding: 9px 10px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight:700;
+      font-size: 12px;
+      transition:.18s ease;
+      white-space:nowrap;
+    }
+    .seg button.active{
+      background: linear-gradient(135deg, rgba(123,47,59,.95), rgba(157,60,76,.85));
+      color: var(--text);
+      box-shadow: 0 10px 25px rgba(123,47,59,.22);
+    }
+    .search{
+      flex: 1;
+      min-width: 220px;
+      max-width: 360px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      border-radius: 16px;
+      padding: 10px 12px;
+    }
+    .search input{
+      width:100%;
+      background: transparent;
+      border:0;
+      outline: none;
+      color: var(--text);
+      font-weight:600;
+      font-size: 13px;
+    }
+    .search input::placeholder{ color: rgba(246,242,244,.45); }
+    .gridCatalog{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .item{
+      grid-column: span 4;
+      border-radius: var(--r20);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .item:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.18); }
+    .thumb{
+      height: 160px;
+      background:
+        radial-gradient(900px 180px at 20% 20%, rgba(216,165,176,.35), transparent 55%),
+        radial-gradient(800px 180px at 80% 15%, rgba(232,209,163,.25), transparent 55%),
+        linear-gradient(135deg, rgba(123,47,59,.75), rgba(0,0,0,.18));
+      position:relative;
+    }
+    .thumb:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, transparent, rgba(255,255,255,.22), transparent);
+      animation: shimmer 4.2s linear infinite;
+      opacity:.35;
+    }
+    .content{
+      padding: 14px;
+    }
+    .line{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      margin-bottom: 8px;
+    }
+    .title{
+      font-family: Unbounded, Inter, sans-serif;
+      font-size: 13px;
+      line-height:1.2;
+      margin:0;
+      letter-spacing:-.01em;
+    }
+    .desc{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height:1.55;
+      min-height: 40px;
+    }
+    .metaRow{
+      display:flex; gap:8px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+
+    /* Info blocks */
+    .split{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      align-items:stretch;
+    }
+    .box{
+      border-radius: var(--r28);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow2);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .box h3{
+      margin:0;
+      font-family: Unbounded, Inter, sans-serif;
+      font-size: 16px;
+      letter-spacing:-.01em;
+    }
+    .box p{ margin:10px 0 0; color:var(--muted); line-height:1.6; font-size: 13px; }
+    .list{
+      margin: 12px 0 0; padding:0; list-style:none;
+      display:grid; gap: 10px;
+    }
+    .li{
+      display:flex; gap:10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+    }
+    .ic{
+      width:22px;height:22px;border-radius: 10px;
+      background: radial-gradient(circle at 30% 30%, rgba(232,209,163,.8), rgba(123,47,59,.65));
+      box-shadow: 0 12px 25px rgba(123,47,59,.18);
+      flex:0 0 auto;
+      display:grid; place-items:center;
+    }
+    .li b{ display:block; font-size: 13px; }
+    .li span{ display:block; margin-top:4px; color: var(--muted); font-size: 12.5px; line-height:1.45; }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.2));
+      padding: 26px 0 40px;
+    }
+    .foot{
+      display:flex; flex-wrap:wrap; gap: 14px;
+      align-items:center; justify-content:space-between;
+    }
+    .foot small{ color: var(--muted2); line-height:1.5; }
+
+    /* Floating WhatsApp */
+    .fab{
+      position:fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index:80;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      align-items:flex-end;
+    }
+    .fab .hint{
+      max-width: 220px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(14px);
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height:1.45;
+      box-shadow: var(--shadow2);
+      transform-origin: 100% 100%;
+      animation: pop 1.2s ease both;
+    }
+    @keyframes pop{
+      0%{ opacity:0; transform: translateY(10px) scale(.96); }
+      100%{ opacity:1; transform: translateY(0) scale(1); }
+    }
+
+    /* Modal */
+    .modal{
+      position:fixed; inset:0; z-index:120;
+      display:none;
+      align-items:center; justify-content:center;
+      padding: 18px;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(12px);
+    }
+    .modal.open{ display:flex; }
+    .sheet{
+      width:min(720px, 100%);
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(900px 260px at 20% 0%, rgba(123,47,59,.32), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .sheet header{
+      padding: 16px 16px 12px;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .sheet header b{
+      font-family: Unbounded, Inter, sans-serif;
+      letter-spacing:-.01em;
+    }
+    .sheet header span{
+      display:block;
+      color: var(--muted2);
+      font-size: 12px;
+      margin-top:6px;
+      line-height:1.3;
+    }
+    .close{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 10px 12px;
+      cursor:pointer;
+      font-weight:800;
+    }
+    .sheet .body{
+      padding: 14px 16px 16px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .field{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      border-radius: 16px;
+      padding: 10px 12px;
+    }
+    .field label{
+      display:block;
+      font-size: 11px;
+      color: var(--muted2);
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .field input, .field textarea, .field select{
+      margin-top: 8px;
+      width:100%;
+      background: transparent;
+      border:0;
+      outline:none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight:600;
+      resize:none;
+    }
+    .field textarea{ min-height: 74px; }
+    .span2{ grid-column: span 2; }
+    .sheet .footer{
+      padding: 12px 16px 16px;
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      justify-content:space-between;
+      border-top: 1px solid rgba(255,255,255,.10);
+      flex-wrap:wrap;
+    }
+    .note{
+      color: var(--muted2);
+      font-size: 12px;
+      line-height:1.35;
+      max-width: 420px;
+    }
+
+    /* Reveal */
+    .reveal{ opacity:0; transform: translateY(14px); transition: .7s ease; }
+    .reveal.on{ opacity:1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .grid{ grid-template-columns: 1fr; }
+      .cta{ min-width: unset; }
+      .brand{ min-width: unset; }
+      .cards .card{ grid-column: span 6; }
+      .gridCatalog .item{ grid-column: span 6; }
+      .split{ grid-template-columns: 1fr; }
+      .sheet .body{ grid-template-columns: 1fr; }
+      .span2{ grid-column: span 1; }
+    }
+    @media (max-width: 560px){
+      .nav{ display:none; }
+      .cards .card{ grid-column: span 12; }
+      .gridCatalog .item{ grid-column: span 12; }
+      .facts{ grid-template-columns: 1fr; }
+      .fab .hint{ display:none; }
+      .hero-card{ padding: 18px; }
+    }
+
+    /* Tiny utility */
+    .mono{ font-variant-numeric: tabular-nums; }
+    .muted{ color: var(--muted); }
+/* real instagram logo */
+.logo {
+  display: none;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  background: #000;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="grain"></div>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top" aria-label="ZHAN FLOWERS">
+         <img 
+  class="logo-img"
+  src="logo.png"
+  alt="ZHAN FLOWERS logo"
+/>
+
+          <div class="name">
+            <b>ZHAN FLOWERS</b>
+            <span>Цветы • Розы • Бенто • Пионы — Талдыкорган</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Навигация">
+          <a href="#catalog">Каталог</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#payments">Оплата</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn ghost" href="https://www.instagram.com/zhanflowers.tdk?igsh=MXFxY2sxMDNqbXYzaw==" target="_blank" rel="noopener">
+            <span aria-hidden="true">⌁</span> Instagram
+          </a>
+          <button class="btn primary" id="openOrderTop">
+            <span aria-hidden="true">✦</span> Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="top" class="hero section">
+    <div class="wrap">
+      <div class="hero .wrap">
+        <div class="hero grid">
+          <div class="hero-card reveal" data-tilt>
+            <div class="badge-row">
+              <span class="pill"><span class="dot"></span> Работаем <b style="color:var(--cream)">круглосуточно</b></span>
+              <span class="pill">Доставка по Талдыкоргану</span>
+              <span class="pill">Kaspi QR / Halyk</span>
+              <span class="pill">Назарбаева 68/78</span>
+            </div>
+
+            <h1>
+              <span class="grad">ZHAN FLOWERS</span><br/>
+              цветы, которые дарят эмоции
+            </h1>
+
+            <p class="lead">
+              Розы, пионы, стильные букеты и <b>бенто-торты</b> — быстро оформим заказ, соберём красиво и доставим.
+              Хочешь “вау-эффект”? Просто нажми <b>«Оформить заказ»</b> — и WhatsApp откроется с готовым текстом.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn primary" id="openOrderHero"><span aria-hidden="true">✦</span> Оформить заказ</button>
+              <a class="btn" href="https://wa.me/77071075252" target="_blank" rel="noopener"><span aria-hidden="true">☏</span> WhatsApp</a>
+              <a class="btn" href="tel:+77071075252"><span aria-hidden="true">✆</span> Позвонить</a>
+              <a class="btn" href="#catalog"><span aria-hidden="true">⟡</span> Смотреть каталог</a>
+            </div>
+
+            <div class="quick" aria-label="Быстрые запросы">
+              <button class="chip" data-quick="Нужен букет на сегодня. Подскажите варианты и цену.">
+                ⚡ Срочно на сегодня
+              </button>
+              <button class="chip" data-quick="Хочу розы. Какие есть цвета/количество и цена?">
+                🌹 Розы
+              </button>
+              <button class="chip" data-quick="Интересуют пионы. Есть в наличии? Какая цена?">
+                🌸 Пионы
+              </button>
+              <button class="chip" data-quick="Хочу бенто-торт. Какие вкусы/цены и сроки?">
+                🍰 Бенто-торт
+              </button>
+            </div>
+          </div>
+
+          <div class="side">
+            <div class="mini reveal" data-tilt>
+              <div class="avatar">
+                <div class="ring">
+                  <div class="photo" aria-label="Аватар ZHAN FLOWERS">
+                    <!-- Лёгкий “логотип-символ” (если захочешь — заменим на реальную картинку) -->
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 21s-7-4.6-7-10.4A4.6 4.6 0 0 1 9.6 6c1.1 0 2.2.5 2.9 1.3A4.1 4.1 0 0 1 15.4 6 4.6 4.6 0 0 1 19 10.6C19 16.4 12 21 12 21Z"
+                            stroke="rgba(246,242,244,.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12 7.4c-.6 2.1-2.5 3.9-5 4.4" stroke="rgba(232,209,163,.85)" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="meta">
+                  <b>ZHAN FLOWERS</b>
+                  <span>ЦВЕТЫ | РОЗЫ | БЕНТО | ПИОНЫ | ДОСТАВКА<br/>ТАЛДЫКОРГАН</span>
+                </div>
+              </div>
+
+              <div class="facts">
+                <div class="fact">
+                  <b>Адрес</b>
+                  <span>Назарбаева 68/78</span>
+                </div>
+                <div class="fact">
+                  <b>График</b>
+                  <span>24/7</span>
+                </div>
+                <div class="fact">
+                  <b>Оплата</b>
+                  <span>Kaspi QR / Halyk</span>
+                </div>
+                <div class="fact">
+                  <b>WhatsApp</b>
+                  <span class="mono">+7 707 107 5252</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mini reveal">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                <div>
+                  <b style="font-family:Unbounded,Inter,sans-serif;">Подарок “под ключ”</b>
+                  <div class="muted" style="font-size:13px; margin-top:8px; line-height:1.5;">
+                    Букет + открытка + доставка. Подберём стиль под повод: день рождения, свидание, извинение, “просто так”.
+                  </div>
+                </div>
+                <div class="tag">Premium</div>
+              </div>
+
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+                <a class="btn small" href="#delivery">Доставка</a>
+                <a class="btn small" href="#payments">Оплата</a>
+                <a class="btn small" href="#contacts">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- grid -->
+      </div>
+    </div>
+  </main>
+
+  <!-- WHY -->
+  <section class="section tight">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 class="h2 reveal">Почему выбирают ZHAN FLOWERS</h2>
+        <p class="sub reveal">ㅤ</p>
+      </div>
+
+      <div class="cards">
+        <div class="card reveal" data-tilt>
+          <div class="top">
+            <span class="tag">Качество</span>
+            <span class="price">✦</span>
+          </div>
+          <h3>Сборка “как на витрине”</h3>
+          <p>Собираем современно: стильная упаковка, гармоничные оттенки, аккуратные ленты и композиция.</p>
+          <div class="actions">
+            <button class="btn small" data-quick="Хочу красивый букет. Подскажите варианты под мой бюджет.">Подобрать букет</button>
+          </div>
+        </div>
+
+        <div class="card reveal" data-tilt>
+          <div class="top">
+            <span class="tag">24/7</span>
+            <span class="price">⌁</span>
+          </div>
+          <h3>Круглосуточно</h3>
+          <p>Когда “нужно срочно” — мы на связи. Уточним адрес, повод и сразу предложим варианты.</p>
+          <div class="actions">
+            <a class="btn small" href="https://wa.me/77071075252" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card reveal" data-tilt>
+          <div class="top">
+            <span class="tag">Оплата</span>
+            <span class="price">ㅤ</span>
+          </div>
+          <h3>Kaspi QR / Halyk</h3>
+          <p>Удобно оплатить сразу — отправим реквизиты/QR. Подтверждение — и мы в работе.</p>
+          <div class="actions">
+            <button class="btn small" data-quick="Хочу оплатить. Пришлите пожалуйста Kaspi QR / Halyk и сумму заказа.">Запросить QR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog" class="section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 class="h2 reveal">Каталог</h2>
+        <p class="sub reveal">ㅤ</p>
+      </div>
+
+      <div class="controls reveal">
+        <div class="filters">
+          <div class="seg" role="tablist" aria-label="Категории">
+            <button class="active" data-cat="all" role="tab">Все</button>
+            <button data-cat="roses" role="tab">Розы</button>
+            <button data-cat="bouquets" role="tab">Букеты</button>
+            <button data-cat="peonies" role="tab">Пионы</button>
+            <button data-cat="bento" role="tab">Бенто</button>
+          </div>
+
+          <div class="seg" role="tablist" aria-label="Бюджет">
+            <button class="active" data-price="all" role="tab">Любой ₸</button>
+            <button data-price="0-10000" role="tab">до 10k</button>
+            <button data-price="10000-20000" role="tab">10–20k</button>
+            <button data-price="20000-30000" role="tab">20–30k</button>
+            <button data-price="30000-999999" role="tab">Premium</button>
+          </div>
+        </div>
+
+        <div class="search" aria-label="Поиск">
+          <span class="muted" aria-hidden="true">⌕</span>
+          <input id="q" placeholder="Поиск: розы, пион, бенто..." autocomplete="off" />
+        </div>
+      </div>
+
+      <div id="catalogGrid" class="gridCatalog"></div>
+
+      <div style="margin-top:16px" class="reveal">
+        <button class="btn primary" id="openOrderCatalog"><span aria-hidden="true">✦</span> Оформить заказ</button>
+        <span class="muted" style="margin-left:10px; font-size:13px;">ㅤ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY + PAYMENTS -->
+  <section id="delivery" class="section tight">
+    <div class="wrap">
+      <div class="split">
+        <div class="box reveal" data-tilt>
+          <h3>Доставка по Талдыкоргану</h3>
+          <p>
+            Укажи адрес и время — мы подтвердим стоимость и время доставки.
+            Можно добавить открытку, а также “сюрприз-доставка” (без звонка получателю).
+          </p>
+          <ul class="list">
+            <li class="li">
+              <div class="ic" aria-hidden="true">⟡</div>
+              <div>
+                <b>Срочная доставка</b>
+                <span>Если нужно “прямо сейчас” — напиши, и мы предложим ближайшее время.</span>
+              </div>
+            </li>
+            <li class="li">
+              <div class="ic" aria-hidden="true">⌁</div>
+              <div>
+                <b>Сборка под повод</b>
+                <span>Свидание, день рождения, “просто так” — подберём стиль и цветовую гамму.</span>
+              </div>
+            </li>
+            <li class="li">
+              <div class="ic" aria-hidden="true">✦</div>
+              <div>
+                <b>Фото перед отправкой</b>
+                <span>По запросу можем отправить фото готового букета перед доставкой.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn primary" id="openOrderDelivery"><span aria-hidden="true">✦</span> Заказать доставку</button>
+            <button class="btn" data-quick="Нужна доставка. Адрес: ___. Время: ___. Бюджет: ___ ₸.">Сформировать запрос</button>
+          </div>
+        </div>
+
+        <div id="payments" class="box reveal" data-tilt>
+          <h3>Оплата</h3>
+          <p>Поддерживаем удобные способы оплаты: <b>Kaspi </b> и <b>Halyk</b>.</p>
+
+          <ul class="list">
+            <li class="li">
+              <div class="ic" aria-hidden="true">K</div>
+              <div>
+                <b>Kaspi QR</b>
+                <span>Выставляем счет на оплату → оплата → подтверждение заказа</span>
+              </div>
+            </li>
+            <li class="li">
+              <div class="ic" aria-hidden="true">H</div>
+              <div>
+                <b>Halyk</b>
+                <span>Можно оплатить через приложение/перевод. Уточним детали.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn primary" data-quick="Здравствуйте! Хочу оплатить заказ. Пришлите, пожалуйста, Kaspi QR / Halyk и сумму.">
+              Запросить QR/реквизиты
+            </button>
+            <a class="btn" href="https://wa.me/77071075252" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 class="h2 reveal">Контакты</h2>
+        <p class="sub reveal">ㅤ</p>
+      </div>
+
+      <div class="split">
+        <div class="box reveal" data-tilt>
+          <h3>Как нас найти</h3>
+          <p><b>Адрес:</b> Назарбаева 68/78, Талдыкорган</p>
+          <p><b>Режим:</b> круглосуточно (24/7)</p>
+          <p><b>WhatsApp:</b> <a class="muted mono" href="https://wa.me/77071075252" target="_blank" rel="noopener">+7 707 107 5252</a></p>
+          <p><b>Instagram:</b> <a class="muted" href="https://www.instagram.com/zhanflowers.tdk?igsh=MXFxY2sxMDNqbXYzaw==" target="_blank" rel="noopener">@zhanflowers.tdk</a></p>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://wa.me/77071075252" target="_blank" rel="noopener"><span aria-hidden="true">✦</span> Заказать в WhatsApp</a>
+            <a class="btn" href="tel:+77071075252">Позвонить</a>
+            <a class="btn" href="https://www.instagram.com/zhanflowers.tdk?igsh=MXFxY2sxMDNqbXYzaw==" target="_blank" rel="noopener">Открыть Instagram</a>
+          </div>
+        </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div class="brand" style="min-width:unset;">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="name">
+            <b>ZHAN FLOWERS</b>
+            <span>Талдыкорган • Назарбаева 68/78 • 24/7 • Kaspi QR / Halyk</span>
+          </div>
+        </div>
+        <small>
+          © <span id="y"></span> ZHAN FLOWERS. Все права защищены.<br/>
+          Сделано с любовью к деталям ✦
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating action -->
+  <div class="fab" aria-label="Быстрый заказ">
+    <div class="hint">Нужен букет срочно? Нажми — WhatsApp откроется с готовым заказом.</div>
+    <a class="btn primary" href="https://wa.me/77071075252" target="_blank" rel="noopener" style="border-radius:18px; padding:12px 14px;">
+      <span aria-hidden="true">✦</span> WhatsApp заказ
+    </a>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Оформление заказа">
+      <header>
+        <div>
+          <b>Оформить заказ</b>
+          <span>Форма соберёт текст и откроет WhatsApp: быстро, удобно, без лишних шагов.</span>
+        </div>
+        <button class="close" id="close">✕</button>
+      </header>
+
+      <div class="body">
+        <div class="field span2">
+          <label>Что заказываем</label>
+          <select id="product">
+            <option value="">Выбрать из каталога (необязательно)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Бюджет (₸)</label>
+          <input id="budget" placeholder="например: 15000" inputmode="numeric" />
+        </div>
+
+        <div class="field">
+          <label>Нужно к (время/дата)</label>
+          <input id="when" placeholder="например: сегодня к 21:00" />
+        </div>
+
+        <div class="field span2">
+          <label>Адрес доставки (если нужно)</label>
+          <input id="addr" placeholder="улица, дом, подъезд/этаж" />
+        </div>
+
+        <div class="field">
+          <label>Самовывоз или доставка</label>
+          <select id="mode">
+            <option>Доставка</option>
+            <option>Самовывоз (Назарбаева 68/78)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Оплата</label>
+          <select id="pay">
+            <option>Kaspi QR</option>
+            <option>Halyk</option>
+            <option>Уточню в чате</option>
+          </select>
+        </div>
+
+        <div class="field span2">
+          <label>Пожелания (цвет, размер, повод, открытка)</label>
+          <textarea id="note" placeholder="например: нежный букет, розы + упаковка, повод — день рождения, нужна открытка"></textarea>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="note">
+          Нажимая «Отправить в WhatsApp», вы откроете чат с <b>ZHAN FLOWERS</b> и уже готовым текстом заказа.
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" id="copy">Скопировать текст</button>
+          <button class="btn primary" id="send"><span aria-hidden="true">✦</span> Отправить в WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ====== CONFIG ======
+    const SHOP = {
+      name: "ZHAN FLOWERS",
+      city: "Талдыкорган",
+      address: "Назарбаева 68/78",
+      whatsappPhone: "77071075252", // without +
+      instagram: "https://www.instagram.com/zhanflowers.tdk?igsh=MXFxY2sxMDNqbXYzaw=="
+    };
+
+    // Demo catalog (замени на реальные позиции/цены/описания когда нужно)
+    // Важно: цены в ₸, категории: roses, bouquets, peonies, bento
+    const CATALOG = [
+      { id:"r1", cat:"roses",    title:"Розы Classic (11–25 шт)", price: 12000, tag:"Розы", desc:"Классика с современным оформлением. Цвет уточним в чате." },
+      { id:"r2", cat:"roses",    title:"Розы Premium (51 шт)",    price: 35000, tag:"Premium", desc:"Большой вау-букет. Идеально на важный повод." },
+      { id:"b1", cat:"bouquets", title:"Букет «Нежность»",         price: 15000, tag:"Хит", desc:"Мягкие оттенки, аккуратная упаковка, открытка по желанию." },
+      { id:"b2", cat:"bouquets", title:"Букет «Винный акцент»",    price: 20000, tag:"Стиль", desc:"Богатая палитра, дорогой вид, фото перед отправкой по запросу." },
+      { id:"p1", cat:"peonies",  title:"Пионы (сезонные)",         price: 22000, tag:"Пионы", desc:"Наличие и оттенки зависят от сезона — уточним быстро." },
+      { id:"p2", cat:"peonies",  title:"Пионы + комплимент",       price: 28000, tag:"Подарок", desc:"Пионы с оформлением и мини-открыткой. Очень эффектно." },
+      { id:"t1", cat:"bento",    title:"Бенто-торт (минимализм)",  price: 7000,  tag:"Бенто", desc:"Компактный торт. Надпись/цвет/вкус — по запросу." },
+      { id:"t2", cat:"bento",    title:"Бенто-торт (премиум)",     price: 12000, tag:"Premium", desc:"Более сложный декор. Сроки уточним — часто делаем быстро." },
+    ];
+
+    // ====== HELPERS ======
+    const qs = (s, el=document) => el.querySelector(s);
+    const qsa = (s, el=document) => [...el.querySelectorAll(s)];
+    const money = (n) => new Intl.NumberFormat("ru-RU").format(n) + " ₸";
+
+    function waLink(text){
+      const encoded = encodeURIComponent(text);
+      return `https://wa.me/${SHOP.whatsappPhone}?text=${encoded}`;
+    }
+
+    function buildMessage(from){
+      const product = qs("#product").value.trim();
+      const budget  = qs("#budget").value.trim();
+      const when    = qs("#when").value.trim();
+      const addr    = qs("#addr").value.trim();
+      const mode    = qs("#mode").value.trim();
+      const pay     = qs("#pay").value.trim();
+      const note    = qs("#note").value.trim();
+
+      const lines = [
+        `Здравствуйте! Хочу оформить заказ в ${SHOP.name}.`,
+        product ? `• Позиция: ${product}` : null,
+        budget  ? `• Бюджет: ${budget} ₸` : null,
+        when    ? `• Нужно к: ${when}` : null,
+        `• Формат: ${mode}`,
+        addr    ? `• Адрес: ${addr}` : (mode.includes("Самовывоз") ? `• Адрес самовывоза: ${SHOP.address}` : null),
+        `• Оплата: ${pay}`,
+        note    ? `• Пожелания: ${note}` : null,
+        `—`,
+        `Город: ${SHOP.city}`,
+        from ? `Источник: ${from}` : null
+      ].filter(Boolean);
+
+      return lines.join("\n");
+    }
+
+    // ====== MODAL ======
+    const modal = qs("#modal");
+    const openModal = (from="Сайт") => {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden","false");
+      modal.dataset.from = from;
+      document.body.style.overflow = "hidden";
+    };
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden","true");
+      document.body.style.overflow = "";
+    };
+
+    qsa("#openOrderTop, #openOrderHero, #openOrderCatalog, #openOrderDelivery").forEach(btn=>{
+      btn.addEventListener("click", ()=> openModal(btn.id || "Сайт"));
+    });
+    qs("#close").addEventListener("click", closeModal);
+    modal.addEventListener("click", (e)=>{ if(e.target === modal) closeModal(); });
+    window.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeModal(); });
+
+    qs("#send").addEventListener("click", ()=>{
+      const text = buildMessage(modal.dataset.from || "Сайт");
+      window.open(waLink(text), "_blank", "noopener");
+    });
+
+    qs("#copy").addEventListener("click", async ()=>{
+      const text = buildMessage(modal.dataset.from || "Сайт");
+      try{
+        await navigator.clipboard.writeText(text);
+        qs("#copy").textContent = "Скопировано ✓";
+        setTimeout(()=> qs("#copy").textContent = "Скопировать текст", 1400);
+      }catch{
+        alert("Не получилось скопировать. Просто нажмите «Отправить в WhatsApp».");
+      }
+    });
+
+    // Quick chips -> direct WhatsApp
+    qsa("[data-quick]").forEach(el=>{
+      el.addEventListener("click", ()=>{
+        const msg = el.dataset.quick || "";
+        window.open(waLink(`Здравствуйте! ${msg}\n\n${SHOP.name} — ${SHOP.city}`), "_blank", "noopener");
+      });
+    });
+
+    // ====== CATALOG RENDER ======
+    const grid = qs("#catalogGrid");
+    const productSelect = qs("#product");
+    const searchInput = qs("#q");
+
+    // Fill select
+    CATALOG.forEach(x=>{
+      const opt = document.createElement("option");
+      opt.value = `${x.title} — ${money(x.price)}`;
+      opt.textContent = `${x.title} • ${money(x.price)}`;
+      productSelect.appendChild(opt);
+    });
+
+    let state = { cat:"all", price:"all", q:"" };
+
+    function inPriceRange(price, range){
+      if(range === "all") return true;
+      const [a,b] = range.split("-").map(Number);
+      return price >= a && price <= b;
+    }
+
+    function matchItem(item){
+      const q = state.q.toLowerCase().trim();
+      const okCat = (state.cat === "all") || (item.cat === state.cat);
+      const okPrice = inPriceRange(item.price, state.price);
+      const okQ = !q || (item.title + " " + item.desc + " " + item.tag).toLowerCase().includes(q);
+      return okCat && okPrice && okQ;
+    }
+
+    function catLabel(cat){
+      return ({
+        roses:"Розы",
+        bouquets:"Букеты",
+        peonies:"Пионы",
+        bento:"Бенто"
+      })[cat] || "Каталог";
+    }
+
+    function render(){
+      const items = CATALOG.filter(matchItem);
+      grid.innerHTML = "";
+
+      items.forEach((x)=>{
+        const el = document.createElement("div");
+        el.className = "item reveal";
+        el.innerHTML = `
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <div class="line">
+              <h4 class="title">${x.title}</h4>
+              <div class="price mono">${money(x.price)}</div>
+            </div>
+            <div class="metaRow">
+              <span class="tag">${catLabel(x.cat)}</span>
+              <span class="tag">${x.tag}</span>
+              <span class="tag">24/7</span>
+            </div>
+            <p class="desc">${x.desc}</p>
+
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn small primary" data-buy="${x.id}"><span aria-hidden="true">✦</span> Заказать</button>
+              <button class="btn small" data-fast="${x.id}">Спросить наличие</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(el);
+      });
+
+      // Hook actions
+      qsa("[data-buy]").forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          const id = btn.dataset.buy;
+          const item = CATALOG.find(z=>z.id===id);
+          productSelect.value = `${item.title} — ${money(item.price)}`;
+          openModal("Каталог");
+        });
+      });
+
+      qsa("[data-fast]").forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          const id = btn.dataset.fast;
+          const item = CATALOG.find(z=>z.id===id);
+          const msg = `Здравствуйте! Подскажите, пожалуйста, есть в наличии: ${item.title}? Цена: ${money(item.price)}. Хочу оформить заказ.`;
+          window.open(waLink(msg), "_blank", "noopener");
+        });
+      });
+
+      // Trigger reveal for newly rendered
+      requestAnimationFrame(()=> observeReveal());
+    }
+
+    // Category buttons
+    qsa('.seg button[data-cat]').forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        qsa('.seg button[data-cat]').forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        state.cat = btn.dataset.cat;
+        render();
+      });
+    });
+
+    // Price buttons
+    qsa('.seg button[data-price]').forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        qsa('.seg button[data-price]').forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        state.price = btn.dataset.price;
+        render();
+      });
+    });
+
+    // Search
+    searchInput.addEventListener("input", ()=>{
+      state.q = searchInput.value;
+      render();
+    });
+
+    // ====== REVEAL ON SCROLL ======
+    let io;
+    function observeReveal(){
+      if(io) io.disconnect();
+      io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.classList.add("on");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      qsa(".reveal:not(.on)").forEach(el=> io.observe(el));
+    }
+
+    // ====== TILT EFFECT (lightweight) ======
+    function bindTilt(){
+      qsa("[data-tilt]").forEach(card=>{
+        let rect;
+        const onMove = (e)=>{
+          rect = rect || card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top) / rect.height;
+          const rx = (y - 0.5) * -10;
+          const ry = (x - 0.5) * 10;
+          card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-1px)`;
+        };
+        const onLeave = ()=>{
+          rect = null;
+          card.style.transform = "";
+        };
+        card.addEventListener("mousemove", onMove);
+        card.addEventListener("mouseleave", onLeave);
+      });
+    }
+
+    // Year
+    qs("#y").textContent = new Date().getFullYear();
+
+    // Init
+    observeReveal();
+    bindTilt();
+    render();
+  </script>
+</body>
+</html>
